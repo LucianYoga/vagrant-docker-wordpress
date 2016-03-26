@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
   vagrant_version = Vagrant::VERSION.sub(/^v/, '')
 
   config.vm.box = "hashicorp/boot2docker"
-  config.vm.define "docker-compose"
+  config.vm.define "docker-wordpress"
 
   #boot2docker ssh
   config.ssh.insert_key = true
@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
   # Configurations from 1.0.x can be placed in Vagrant 1.1.x specs like the following.
   config.vm.provider :virtualbox do |v|
     # Set the box name in VirtualBox to match the working directory.
-    v.name = "Docker-Compose"
+    v.name = "Docker-Wordpress"
   end
 
   # Local Machine Hosts
